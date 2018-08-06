@@ -1,0 +1,2 @@
+# Rules for hotplugging Monoprice 22 touchscreen
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="2179", ATTR{idProduct}=="0077", RUN+="/usr/local/bin/load_mono_22.sh"

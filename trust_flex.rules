@@ -1,0 +1,2 @@
+# Rules for hotplugging Trust Flex Design tablets
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="2179", ATTR{idProduct}=="0077", RUN+="/usr/local/bin/load_trust_flex.sh"
