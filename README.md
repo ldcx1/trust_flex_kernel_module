@@ -26,6 +26,7 @@ References
 ==========
 based on the driver by <fpgasm@apple2.x10.mx>
 - https://github.com/odysseywestra/Monoprice_22_linux_kernel_module
+
 and on original drivers by  <weixing@hanwang.com.cn>
 - http://linux.fjfi.cvut.cz/~taxman/hw/hanvon/
 - https://github.com/exaroth/pentagram_virtuoso_drivers/blob/master/hanvon.c
