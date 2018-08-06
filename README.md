@@ -1,17 +1,18 @@
-This is an experimental driver for Monoprice 22
+This is an experimental driver for Trust Flex Design graphic tablet.
+When hovering the stylus over surface the cursor is not moving smooth.
 
-Current status: stable as of 11 Nov 2016.  Please open issues for any bugs you find.
-
-  - BTN_TOOL_PEN and BUTTON_TOOL_RUBBER are signaled as soon as they are in hover range;
-  - BTN_TOUCH is set when stylus or rubber touch the screen;
+  - BTN_TOOL_PEN is signaled as soon as the stylus is in hover range;
+  - BTN_TOUCH is set when stylus touch the screen;
   - BTN_STYLUS2 is set while button pressed;
-  - GIMP and KRITA work, but eraser is not recognized, as in all drivers I've seen
+  - BTN_LEFT is set while pen touch the pad;
+  - BTN_STYLUS is set while the third button is pressed;
+  - GIMP and KRITA work;
 
 Installation
 ============
 
 To install:
-- verify that your computer sees your Monoprice.  `lsusb` should show 'ID 0b57:9016 Beijing HanwangTechnology Co., Ltd';
+- verify that your computer sees your tablet.  `lsusb` should show 'ID 2179:0077';
 - `make` to build the driver;
 - `sudo make install` to install the driver.
 
@@ -21,33 +22,12 @@ To uninstall, of course
 ```
 sudo make uninstall
 ```
-
-Troubleshooting
-===============
-
-If your stylus is not responsive after hybernation, type `sudo /usr/local/bin/load_mono_22.sh`.  This is a known issue.
-
-You can try checking
-- `lsusb` for 0b57:9016;
-- `lsmod | grep mono` for mono_22
-- `cat /proc/bus/input/devices` to see where your device is attached
-
-With xinput, you can look try
-- `xinput` and look for 'Monoprice 22'
-- `xinput list --long "Monoprice 22"`
-- `while :; do xinput --query-state "Monoprice 22"; sleep 1; done`
-- `xinput test "Monoprice 22"`
-also,
-- `evtest` 
-
-Hacking
-=======
-Obviously, sudo make uninstall and make clean as needed...
-See aidyw's repo for more information about debugging the driver.
-
 References
 ==========
-based on original drivers by  <weixing@hanwang.com.cn>
+based on driver by <fpgasm@apple2.x10.mx>
+- https://github.com/odysseywestra/Monoprice_22_linux_kernel_module
+
+and on original drivers by  <weixing@hanwang.com.cn>
 - http://linux.fjfi.cvut.cz/~taxman/hw/hanvon/
 - https://github.com/exaroth/pentagram_virtuoso_drivers/blob/master/hanvon.c
 - further modified and improved by aidyw https://github.com/aidyw/bosto-2g-linux-kernel-module
