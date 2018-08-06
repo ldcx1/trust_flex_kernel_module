@@ -24,7 +24,7 @@ sudo make uninstall
 ```
 References
 ==========
-based on the driver by <fpgasm@apple2.x10.mx>
+based on driver by <fpgasm@apple2.x10.mx>
 - https://github.com/odysseywestra/Monoprice_22_linux_kernel_module
 
 and on original drivers by  <weixing@hanwang.com.cn>
