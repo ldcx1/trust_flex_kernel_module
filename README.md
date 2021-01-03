@@ -24,10 +24,10 @@ sudo make uninstall
 ```
 References
 ==========
-based on driver by <fpgasm@apple2.x10.mx>
+Based on driver by <fpgasm@apple2.x10.mx>
 - https://github.com/odysseywestra/Monoprice_22_linux_kernel_module
 
-and on original drivers by  <weixing@hanwang.com.cn>
+And on original drivers by  <weixing@hanwang.com.cn>
 - http://linux.fjfi.cvut.cz/~taxman/hw/hanvon/
 - https://github.com/exaroth/pentagram_virtuoso_drivers/blob/master/hanvon.c
 - further modified and improved by aidyw https://github.com/aidyw/bosto-2g-linux-kernel-module
